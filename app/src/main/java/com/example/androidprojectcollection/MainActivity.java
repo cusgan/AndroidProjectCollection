@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         activity = this;
 
         //===== BUTTON EXERCISE =====
+        //TODO make separate activity for button exercise
 
         //1. change activity
         btnClose = findViewById(R.id.btnClose);
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //===== CALCULATOR =====
-
+        //TODO connect calculator and remake midterm exam
 
 
         //===== MIDTERM EXAM =====
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //===== MATCH 3 =====
+        //===== MATCH 3 ===== TODO connect
         btnMatch3 = (Button) findViewById(R.id.btnMatch3);
         btnMatch3.setOnClickListener(new View.OnClickListener() {
             @Override
