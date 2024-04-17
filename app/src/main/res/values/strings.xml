@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AndroidProjectCollection</string>
+    <string name="btnClose">Close</string>
+    <string name="btnToast">Toast</string>
+    <string name="btnChangeBtnBG">Change Button BG</string>
+    <string name="btnDisappear">Disappear</string>
+    <string name="btnChangeBG">Change BG</string>
+    <string name="btnReturn">Return</string>
+
+    <string name="btnLayout">Layout Exercise</string>
+    <string name="strInstagram">Instagram</string>
+    <string name="strUsername">Username</string>
+    <string name="strLike">Like</string>
+    <string name="strShare">Share</string>
+
+    <string name="strLayoutExercise">Layout Exercise</string>
+    <string name="strMidterm">Midterm Exam</string>
+    <string name="strMatch3">Match 3</string>
+    <string name="strCalculator">Calculator</string>
+
+    <string name="blank"> </string>
+</resources>
