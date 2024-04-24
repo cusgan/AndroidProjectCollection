@@ -2,6 +2,7 @@ package com.example.androidprojectcollection;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnTicTacToe;
     Button btnMatch3;
     Button btnPassingIntent;
+    Button btnMenu;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,6 +130,19 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(
                         MainActivity.this,//this activity
                         PassingIntentsExercise.class
+                );
+                startActivity(intent1);
+            }
+        });
+
+        //MENU EXERCISE
+        btnMenu = (Button) findViewById(R.id.btnMenuExercise);
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(
+                        MainActivity.this,//this activity
+                        MenuExercise.class
                 );
                 startActivity(intent1);
             }
