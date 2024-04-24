@@ -14,15 +14,9 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnClose, btnToast, btnChangeBG, btnChangeBtnBG, btnDisappear;
     Activity activity;
-    int[] colors = {Color.RED, Color.YELLOW, Color.BLUE, Color.CYAN, Color.MAGENTA, Color.GREEN};
 
-    Button btnLayoutExercise;
-    Button btnTicTacToe;
-    Button btnMatch3;
-    Button btnPassingIntent;
-    Button btnMenu;
+    Button btnButtonExercise, btnLayoutExercise, btnTicTacToe, btnMatch3, btnPassingIntent, btnMenu;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,55 +26,17 @@ public class MainActivity extends AppCompatActivity {
         activity = this;
 
         //===== BUTTON EXERCISE =====
-        //TODO make separate activity for button exercise
-
-        //1. change activity
-        btnClose = findViewById(R.id.btnClose);
-        btnClose.setOnClickListener(new View.OnClickListener() {
+        btnButtonExercise = (Button) findViewById(R.id.btnButtonExercise);
+        btnButtonExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Return.class));
+                Intent intent1 = new Intent(
+                        MainActivity.this,//this activity
+                        ButtonExercise.class
+                );
+                startActivity(intent1);
             }
         });
-
-        //2. toast button
-        btnToast = findViewById(R.id.btnToast);
-        btnToast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "This is a toast!", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        //3. change activity bg
-        btnChangeBG = findViewById(R.id.btnChangeBG);
-        btnChangeBG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int rand = new Random().nextInt(colors.length);
-                activity.findViewById(android.R.id.content).setBackgroundColor(colors[rand]);
-            }
-        });
-
-        //4. change button bg
-        btnChangeBtnBG = findViewById(R.id.btnChangeBtnBG);
-        btnChangeBtnBG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int rand = new Random().nextInt(colors.length);
-                btnChangeBtnBG.setBackgroundColor(colors[rand]);
-            }
-        });
-
-        //5. button turns invisible
-        btnDisappear = findViewById(R.id.btnDisappear);
-        btnDisappear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btnDisappear.setVisibility(View.INVISIBLE);
-            }
-        });
-
 
         //===== LAYOUT EXERCISE =====
         btnLayoutExercise = (Button) findViewById(R.id.btnLayoutExercise);

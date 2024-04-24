@@ -55,18 +55,22 @@ public class MenuExercise extends AppCompatActivity {
         } else if (item.getItemId() == R.id.mItemColor) { //1
             int rand1 = new Random().nextInt(colors.length);
             btnChanger.setBackgroundColor(colors[rand1]);
+            Toast.makeText(this, "Color Updated", Toast.LENGTH_SHORT).show();
 
         } else if (item.getItemId() == R.id.mItemSize) { //2
             btnChanger.setWidth(500);
             btnChanger.setHeight(500);
+            Toast.makeText(this, "Size Updated", Toast.LENGTH_SHORT).show();
 
         } else if (item.getItemId() == R.id.mItemTextColor) { //3
             int rand2 = new Random().nextInt(colors.length);
             btnChanger.setTextColor(colors[rand2]);
+            Toast.makeText(this, "Text Color Updated", Toast.LENGTH_SHORT).show();
 
         } else if (item.getItemId() == R.id.mItemGreeting) { //4
             int rand3  = new Random().nextInt(greetings.length);
             btnChanger.setText(greetings[rand3]);
+            Toast.makeText(this, "Greetings Updated", Toast.LENGTH_SHORT).show();
 
         } else if (item.getItemId() == R.id.mItemVisibility) { //5
             if (btnChanger.getVisibility() == View.VISIBLE) {
@@ -74,6 +78,7 @@ public class MenuExercise extends AppCompatActivity {
             } else {
                 btnChanger.setVisibility(View.VISIBLE);
             }
+            Toast.makeText(this, "Visibility Updated", Toast.LENGTH_SHORT).show();
 
         }
         else if (item.getItemId() == R.id.mItemReset) {
